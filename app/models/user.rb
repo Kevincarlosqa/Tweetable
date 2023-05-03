@@ -7,6 +7,8 @@ class User < ApplicationRecord
   # Associations
   has_many :tweets, dependent: :destroy
   has_many :likes, dependent: :destroy
+
+  has_one_attached :profile
   # has_many :tweets, through: :likes
 
   # Validations

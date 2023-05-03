@@ -19,6 +19,11 @@ user2 = User.create(username: "user2", email: "user2@mail.com", name: Faker::Nam
 user3 = User.create(username: "user3", email: "user3@mail.com", name: Faker::Name.name, password: "qwerty", password_confirmation: "qwerty")
 user4 = User.create(username: "user4", email: "user4@mail.com", name: Faker::Name.name, password: "qwerty", password_confirmation: "qwerty")
 
+user1.profile.attach(io: File.open("db/profiles/profile1.png"), filename: "profile1.png")
+user2.profile.attach(io: File.open("db/profiles/profile2.png"), filename: "profile2.png")
+user3.profile.attach(io: File.open("db/profiles/profile3.png"), filename: "profile3.png")
+user4.profile.attach(io: File.open("db/profiles/profile4.png"), filename: "profile4.png")
+
 puts "Seeding Tweets"
 
 5.times { Tweet.create(body: Faker::Lorem.paragraph, user:user1) }
