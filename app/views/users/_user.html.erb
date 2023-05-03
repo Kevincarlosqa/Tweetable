@@ -5,18 +5,28 @@
   </h3>
 
   <p>
-    <strong>Username:</strong>
-    <%= user.username %>
+    @<%= user.username %>
   </p>
 
-  <p>
-    <strong>Name:</strong>
-    <%= user.name %>
-  </p>
+  <p>Joined on <%= time_tag(user.created_at, datetime: user.created_at.to_s, format: "%B %d, %Y") %></p>
+  <%= link_to "Edit this user", edit_user_path(@user) %>
+  <%#user.role %>
+  <h3> Tweets (<%= user.tweets.size%>) </h3>
+  <% user.tweets.each do |tweet| %>
+    <%= render tweet %>
+    <p>
+      <%= link_to "Show this tweet", tweet %>
+      <%= button_to "Destroy this tweet", tweet, method: :delete %>
+      <%= link_to "Edit this tweet", edit_tweet_path(tweet) %>
+    </p>
+  <% end %>
 
-  <p>
-    <strong>Role:</strong>
-    <%= user.role %>
-  </p>
-
+  <h3> Likes (<%= user.likes.size%>) </h3>
+  <% user.likes.each do |tweet| %>
+    <%= render tweet.tweet %>
+    <p>
+      <%= link_to "Show this tweet", tweet %>
+    </p>
+  <% end %>
+  
 </div>
