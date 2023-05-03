@@ -12,6 +12,11 @@
 
   <body>
     <%= button_to "Sign out", destroy_user_session_path, method: :delete %> 
+    <%unless current_user.nil?%>
+      <div>         
+        <p >Signed in as <%=current_user.username%></p>
+      </div>
+    <%end%>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
