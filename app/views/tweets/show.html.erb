@@ -1,6 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @tweet %>
+<% @tweet.replies.each do |tweet| %>
+    <%= render tweet %>
+    <p>
+      <%= link_to "Show this tweet", tweet %>
+    </p>
+  <% end %>
+
+
 
 <div>
   <%= link_to "Edit this tweet", edit_tweet_path(@tweet) %> |

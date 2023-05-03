@@ -29,10 +29,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_02_214337) do
     t.integer "replies_count", default: 0
     t.integer "likes_count", default: 0
     t.bigint "user_id", null: false
-    t.bigint "replied_to_id"
+    t.bigint "parent_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["replied_to_id"], name: "index_tweets_on_replied_to_id"
+    t.index ["parent_id"], name: "index_tweets_on_parent_id"
     t.index ["user_id"], name: "index_tweets_on_user_id"
   end
 
@@ -49,6 +49,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_02_214337) do
 
   add_foreign_key "likes", "tweets"
   add_foreign_key "likes", "users"
-  add_foreign_key "tweets", "tweets", column: "replied_to_id"
+  add_foreign_key "tweets", "tweets", column: "parent_id"
   add_foreign_key "tweets", "users"
 end

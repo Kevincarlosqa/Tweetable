@@ -21,20 +21,21 @@ user4 = User.create(username: "user4", email: "user4@mail.com", name: Faker::Nam
 
 puts "Seeding Tweets"
 
-rand(1..4).times { Tweet.create(body: Faker::Lorem.paragraph, user:user1) }
-rand(1..4).times { Tweet.create(body: Faker::Lorem.paragraph, user:user2) }
-rand(1..4).times { Tweet.create(body: Faker::Lorem.paragraph, user:user3) }
-rand(1..4).times { Tweet.create(body: Faker::Lorem.paragraph, user:user4) }
+5.times { Tweet.create(body: Faker::Lorem.paragraph, user:user1) }
+5.times { Tweet.create(body: Faker::Lorem.paragraph, user:user2) }
+5.times { Tweet.create(body: Faker::Lorem.paragraph, user:user3) }
+5.times { Tweet.create(body: Faker::Lorem.paragraph, user:user4) }
 
-p user1.tweets.sample
 
-rand(1..7).times { Tweet.create(body: Faker::Lorem.paragraph, user:user1, replied_to: User.all.sample.tweets.sample) }
-rand(1..7).times { Tweet.create(body: Faker::Lorem.paragraph, user:user2, replied_to: User.all.sample.tweets.sample) }
-rand(1..7).times { Tweet.create(body: Faker::Lorem.paragraph, user:user3, replied_to: User.all.sample.tweets.sample) }
-rand(1..7).times { Tweet.create(body: Faker::Lorem.paragraph, user:user4, replied_to: User.all.sample.tweets.sample) }
+15.times { Tweet.create(body: Faker::Lorem.paragraph, user:user1, parent: Tweet.all.sample) }
+15.times { Tweet.create(body: Faker::Lorem.paragraph, user:user2, parent: Tweet.all.sample) }
+15.times { Tweet.create(body: Faker::Lorem.paragraph, user:user3, parent: Tweet.all.sample) }
+15.times { Tweet.create(body: Faker::Lorem.paragraph, user:user4, parent: Tweet.all.sample) }
 
-rand(1..10).times { Like.create(user:user1, tweet: Tweet.all.sample) }
-rand(1..10).times { Like.create(user:user2, tweet: Tweet.all.sample) }
-rand(1..10).times { Like.create(user:user3, tweet: Tweet.all.sample) }
-rand(1..10).times { Like.create(user:user4, tweet: Tweet.all.sample) }
+puts "Seeding Likes"
+
+15.times { Like.create(user:user1, tweet: Tweet.all.sample) }
+15.times { Like.create(user:user2, tweet: Tweet.all.sample) }
+15.times { Like.create(user:user3, tweet: Tweet.all.sample) }
+15.times { Like.create(user:user4, tweet: Tweet.all.sample) }
 
