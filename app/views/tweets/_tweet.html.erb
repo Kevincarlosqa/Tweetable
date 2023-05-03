@@ -1,6 +1,18 @@
 <div id="<%= dom_id tweet %>">
   <p>
-    <strong>Body:</strong>
+    <strong><%= tweet.user.name %></strong>
+  </p>
+
+  <p>
+    @<%= tweet.user.username %>
+  </p>
+
+   <p>
+    <%= time_ago_in_words(tweet.created_at) %> ago
+  </p>
+
+  <p>
+     <strong>Body:</strong>
     <%= tweet.body %>
   </p>
 
@@ -14,14 +26,11 @@
     <%= tweet.likes_count %>
   </p>
 
-  <p>
-    <strong>User:</strong>
-    <%= tweet.user_id %>
-  </p>
+  <div>
+    <%= link_to "Like", new_like_path  %>
+  </div>
 
-  <p>
-    <strong>Parent:</strong>
-    <%= tweet.parent_id %>
-  </p>
+    <%# tweet.user_id %>
+    <%# tweet.parent_id %>
 
 </div>

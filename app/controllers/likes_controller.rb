@@ -22,7 +22,6 @@ class LikesController < ApplicationController
   # POST /likes
   def create
     @like = Like.new(like_params)
-
     if @like.save
       redirect_to @like, notice: "Like was successfully created."
     else

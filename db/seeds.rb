@@ -13,11 +13,11 @@ ActiveRecord::Base.connection.reset_pk_sequence!('likes')
 
 puts "Seeding Users"
 
-admin = User.create(username: "admin", email: "admin@mail.com", name: "admin")
-user1 = User.create(username: "user1", email: "user1@mail.com", name: Faker::Name.name)
-user2 = User.create(username: "user2", email: "user2@mail.com", name: Faker::Name.name)
-user3 = User.create(username: "user3", email: "user3@mail.com", name: Faker::Name.name)
-user4 = User.create(username: "user4", email: "user4@mail.com", name: Faker::Name.name)
+admin = User.create(username: "admin", email: "admin@mail.com", name: "admin", password: "qwerty", password_confirmation: "qwerty")
+user1 = User.create(username: "user1", email: "user1@mail.com", name: Faker::Name.name, password: "qwerty", password_confirmation: "qwerty")
+user2 = User.create(username: "user2", email: "user2@mail.com", name: Faker::Name.name, password: "qwerty", password_confirmation: "qwerty")
+user3 = User.create(username: "user3", email: "user3@mail.com", name: Faker::Name.name, password: "qwerty", password_confirmation: "qwerty")
+user4 = User.create(username: "user4", email: "user4@mail.com", name: Faker::Name.name, password: "qwerty", password_confirmation: "qwerty")
 
 puts "Seeding Tweets"
 
