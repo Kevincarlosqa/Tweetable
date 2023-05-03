@@ -42,7 +42,7 @@ class TweetsController < ApplicationController
   # DELETE /tweets/1
   def destroy
     @tweet.destroy
-    redirect_to tweets_url, notice: "Tweet was successfully destroyed."
+    redirect_to @tweet.user, notice: "Tweet was successfully destroyed."
   end
 
   private

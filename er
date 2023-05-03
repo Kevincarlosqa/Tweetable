@@ -1,0 +1,15 @@
+
+[1mFrom:[0m /home/kevincarlosqa/codeable/week12/tweetable-Kevincarlosqa/app/views/users/_form.html.erb:36 #<Class:0x00007f014c2119d0>#_app_views_users__form_html_erb__1726213222511087104_59140:
+
+    [1;34m31[0m:     <%= form.number_field :role %>
+    [1;34m32[0m:   </div>
+    [1;34m33[0m: 
+    [1;34m34[0m:   <div class="field">
+    [1;34m35[0m:     <%= form.label :password %><br />
+ => [1;34m36[0m:     <%binding.pry%>
+    [1;34m37[0m:     <%= form.password_field :password, autocomplete: "current-password" %>
+    [1;34m38[0m:   </div>
+    [1;34m39[0m:   <div class="field">
+    [1;34m40[0m:     <%= form.label :password_confirmation %><br />
+    [1;34m41[0m:     <%= form.password_field :password_confirmation %>
+
