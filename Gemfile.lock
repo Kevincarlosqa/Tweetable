@@ -259,6 +259,12 @@ GEM
     stimulus-rails (1.0.4)
       railties (>= 6.0.0)
     strscan (3.0.1)
+    tailwindcss-rails (2.0.29)
+      railties (>= 6.0.0)
+    tailwindcss-rails (2.0.29-x64-mingw32)
+      railties (>= 6.0.0)
+    tailwindcss-rails (2.0.29-x86_64-linux)
+      railties (>= 6.0.0)
     thor (1.2.1)
     timeout (0.2.0)
     turbo-rails (1.0.1)
@@ -290,6 +296,7 @@ PLATFORMS
   x64-mingw32
   x86-mingw32
   x86-mswin32
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
@@ -308,6 +315,7 @@ DEPENDENCIES
   rubocop-rails
   sprockets-rails
   stimulus-rails
+  tailwindcss-rails (~> 2.0)
   turbo-rails
   tzinfo-data
   web-console

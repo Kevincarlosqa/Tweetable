@@ -71,3 +71,4 @@ gem 'pry', '~> 0.13.1'
 gem 'devise'
 gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
 gem 'omniauth-rails_csrf_protection'
+gem "tailwindcss-rails", "~> 2.0"
