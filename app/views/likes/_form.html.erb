@@ -1,4 +1,4 @@
-<%= form_with(model: like) do |form| %>
+<%= form_with(model: like, url: "/likes", method: :post) do |form| %>
   <% if like.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(like.errors.count, "error") %> prohibited this like from being saved:</h2>
@@ -13,12 +13,12 @@
 
   <div>
     <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
+    <%= form.text_field :user_id, value: current_user.id %>
   </div>
 
   <div>
     <%= form.label :tweet_id, style: "display: block" %>
-    <%= form.text_field :tweet_id %>
+    <%= form.text_field :tweet_id, value: like.tweet.id %>
   </div>
 
   <div>

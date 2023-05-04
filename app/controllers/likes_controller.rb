@@ -12,7 +12,9 @@ class LikesController < ApplicationController
 
   # GET /likes/new
   def new
-    @like = Like.new
+    create
+
+    # @like = Like.new
   end
 
   # GET /likes/1/edit
@@ -21,11 +23,14 @@ class LikesController < ApplicationController
 
   # POST /likes
   def create
-    @like = Like.new(like_params)
+    # binding.pry
+    @like = Like.new(user_id: params[:user_id], tweet_id: params[:tweet_id])
     if @like.save
-      redirect_to @like, notice: "Like was successfully created."
+      # render "/", notice: "Like was successfully created."
+      return
     else
-      render :new, status: :unprocessable_entity
+  
+      return
     end
   end
 

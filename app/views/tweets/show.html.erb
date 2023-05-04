@@ -1,8 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
+<h2>Tweet Detail</h2>
+
 <%= render @tweet %>
 <% @tweet.replies.each do |tweet| %>
     <%= render tweet %>
+  
     <p>
       <%= link_to "Show this tweet", tweet %>
     </p>

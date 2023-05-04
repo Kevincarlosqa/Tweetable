@@ -1,5 +1,10 @@
 <h2>Profile</h2>
 <div id="<%= dom_id user %>">
+  <% if user.profile.attached?%>
+  <div>
+    <%= image_tag user.profile%>
+  </div>
+  <%end%>
   <h3>
     <%= user.name %>
   </h3>
@@ -9,7 +14,7 @@
   </p>
 
   <p>Joined on <%= time_tag(user.created_at, datetime: user.created_at.to_s, format: "%B %d, %Y") %></p>
-  <%= link_to "Edit this user", edit_user_path(@user) %>
+  <%= link_to "Edit Profile", edit_user_registration_path(user) %>
   <%#user.role %>
   <h3> Tweets (<%= user.tweets.size%>) </h3>
   <% user.tweets.each do |tweet| %>
