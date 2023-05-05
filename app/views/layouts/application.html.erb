@@ -11,7 +11,7 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="bg-gray-100">
     <%= link_to "Tweets", root_path%>
     <%= button_to "Sign out", destroy_user_session_path, method: :delete %> 
     <%unless current_user.nil?%>
@@ -24,7 +24,7 @@
     <%end%>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-     <div class="flex flex-col md:max-w-4xl mx-auto justify-around ">
+     <div class="w-[32rem] mx-auto justify-center px-5">
         <%= yield %>
         </div>
   </body>
