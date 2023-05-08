@@ -23,7 +23,7 @@
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
        <a href="/" class="flex items-center">
         <img src="https://www.seekpng.com/png/detail/140-1402510_twitter-logo-white-twitter-logo-svg.png" class="h-8 mr-" />
-        <span class="self-center text-2xl font-semibold whitespace-nowrap text-black">Tweetable</span>
+        <span class="self-center text-2xl font-semibold whitespace-nowrap text-black">{<span class ="text-gray-400">Tweet</span>able}</span>
        </a>
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
       
@@ -71,5 +71,9 @@
      <div class="w-[32rem] mx-auto justify-center px-5">
         <%= yield %>
         </div>
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8 items-center">
+    <p class="flex justify-around items-center font-semibold text-gray-800 mb-5">© 2021 - Codeable Tweetable</p>
+      <p class="flex justify-around items-center font-semibold text-gray-800 mb-5">Build with &#9829 by KevinQuispe</p>
+    </div>
   </body>
 </html>
