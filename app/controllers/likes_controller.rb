@@ -27,10 +27,10 @@ class LikesController < ApplicationController
     @like = Like.new(user_id: params[:user_id], tweet_id: params[:tweet_id])
     if @like.save
       # render "/", notice: "Like was successfully created."
-      return
+      redirect_to root_path
     else
   
-      return
+      redirect_to root_path
     end
   end
 
