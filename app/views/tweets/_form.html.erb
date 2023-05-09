@@ -1,4 +1,6 @@
+<%tweet = Tweet.new%>
 <%= form_with(model: tweet) do |form| %>
+
   <% if tweet.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(tweet.errors.count, "error") %> prohibited this tweet from being saved:</h2>
@@ -11,8 +13,8 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.text_area :body %>
+  <div class="mt-4">
+    <%= form.text_area :body, class:"resize-none w-full shadow appearance-none border rounded h-32 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: "Remember to thing before write..." %>
   </div>
 <!--
   <div>
@@ -31,12 +33,12 @@
   </div>
   -->
 
-  <div>
+  <div class = "hidden">
     <%= form.label :user_id, style: "display: block" %>
     <%= form.text_field :user_id, value: current_user.id %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Tweet"%>
   </div>
 <% end %>
