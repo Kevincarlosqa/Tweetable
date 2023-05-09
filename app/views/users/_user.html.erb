@@ -30,7 +30,12 @@
   <%#user.role %>
   </div>
 </section>
-  <h3> Tweets (<%= user.tweets.size%>) </h3>
+  <div>
+    <button id="btn-1" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><h3> Tweets (<%= user.tweets.size%>) </h3></button>
+    <button id="btn-2" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><h3> Likes (<%= user.likes.size%>) </h3></button>
+  </div>
+  <div id="content-1">
+  
   <% user.tweets.each do |tweet| %>
     <%= render tweet %>
     <p>
@@ -39,10 +44,14 @@
       <%= link_to "Edit this tweet", edit_tweet_path(tweet) %>
     </p>
   <% end %>
-
-  <h3> Likes (<%= user.likes.size%>) </h3>
+  </div>
+  <div id="content-2" class="hidden">
+  
   <% user.likes.each do |tweet| %>
     <%= render tweet.tweet %>
   <% end %>
+  </div>
+
+
   
 </div>

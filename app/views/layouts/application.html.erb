@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Tweetable</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
@@ -14,7 +14,7 @@
 
   </head>
 
-  <body class="bg-gray-100 grid">
+  <body class="bg-gray-100 grid min-h-screen w-screen">
     <header>
       <style>
         .dropdown:focus-within .dropdown-menu {
@@ -24,10 +24,10 @@
         }
       </style>
       
-      <div class="max-w-screen-xl flex justify-between mx-auto p-4">
+      <div class="max-w-screen-xl flex justify-between mx-auto p-4 pl-0 pr-2 items-center">
        <a href="/" class="flex items-center">
-        <img src="https://www.seekpng.com/png/detail/140-1402510_twitter-logo-white-twitter-logo-svg.png" class="h-8 mr-" />
-        <span class="self-center text-2xl font-semibold whitespace-nowrap text-black">{<span class ="text-gray-400">Tweet</span>able}</span>
+        <img src="https://www.seekpng.com/png/detail/140-1402510_twitter-logo-white-twitter-logo-svg.png" class="h-8 mr-0" />
+        <span class="self-center text-xl font-semibold whitespace-nowrap text-black">{<span class ="text-gray-400">Tweet</span>able}</span>
        </a>
         
         <div class=" relative inline-block text-left dropdown">
@@ -36,7 +36,7 @@
        type="button" aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
         <%# <span>Options</span> %>
         
-         <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2 s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2 S29.104,22,28,22z"/></svg>
+         <svg height="20px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="20px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2 s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2 S29.104,22,28,22z"/></svg>
         </button
       ></span>
       <div class="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
@@ -67,12 +67,12 @@
     </header>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-     <div class="w-[32rem] mx-auto justify-center px-5">
+     <div class="w-96 mx-auto justify-center px-5">
         <%= yield %>
         </div>
-    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8 items-center">
-    <p class="flex justify-around items-center text-gray-800 mb-5">© 2023 - Codeable Tweetable</p>
-      <p class="flex justify-around items-center text-gray-800 mb-5">Build with &#9829 by KevinQuispe</p>
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8 items-center text-sm">
+    <p class="flex justify-around items-center font-medium text-gray-800 mb-5">© 2023 - Codeable Tweetable</p>
+      <p class="flex justify-around items-center font-medium text-gray-800 mb-5">Build with &#9829 by KevinQuispe</p>
     </div>
   </body>
 </html>

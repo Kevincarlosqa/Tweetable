@@ -14,7 +14,7 @@
         <div class="ml-1.5 text-sm leading-tight flex flex-col">
           <span class="text-black dark:text-white font-bold inline-block "><%= tweet.user.name %> <%= link_to " @#{tweet.user.username}", tweet.user, class:"text-gray-400 font-normal"%></span>
 
-          <span class="text-gray-500 dark:text-gray-400 font-normal inline-block"><%= time_ago_in_words(tweet.created_at) %> ago</span>
+          <span class="text-gray-400 font-normal inline-block text-xs"><%= time_ago_in_words(tweet.created_at) %> ago</span>
         </div>
       </div>
       <div class="grow-1">
@@ -24,7 +24,7 @@
       </div>
   </div>
     <%= link_to tweet do%>
-      <p class="text-black dark:text-white block text-xl mt-3"><%= tweet.body %></p>
+      <p class="text-white block text-lg mt-3"><%= tweet.body %></p>
     <% end %>  
   <div class="border-gray-500 border border-b-0 my-1"></div>
   <div class="text-gray-400 flex justify-end mt-1">
