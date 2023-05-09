@@ -1,7 +1,16 @@
   <div class="bg-gray-800 border-gray-800 p-4 rounded-xl border w-md mb-2">
   <div class="flex flex-row justify-between">
       <div class="flex">
-         <%= image_tag tweet.user.profile, class:"h-11 w-11 rounded-full"%>
+      <% if tweet.user.profile.attached?%>
+        <div>
+      <%= image_tag tweet.user.profile, class:"h-11 w-11 rounded-full" %>
+        </div>
+      <%else%>
+        <div>
+        <%= image_tag "https://storroom.com/wp-content/uploads/2019/02/default-user.png", class:"h-11 w-11 rounded-full" %>
+        </div>
+      <%end%>
+        
         <div class="ml-1.5 text-sm leading-tight flex flex-col">
           <span class="text-black dark:text-white font-bold inline-block "><%= tweet.user.name %> <%= link_to " @#{tweet.user.username}", tweet.user, class:"text-gray-400 font-normal"%></span>
 
