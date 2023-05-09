@@ -12,7 +12,7 @@
       <%end%>
         
         <div class="ml-1.5 text-sm leading-tight flex flex-col">
-          <span class="text-black dark:text-white font-bold inline-block "><%= tweet.user.name %> <%= link_to " @#{tweet.user.username}", tweet.user, class:"text-gray-400 font-normal"%></span>
+          <span class="text-black dark:text-white font-bold inline-block "><%= link_to "#{tweet.user.name}", tweet.user%> <%= link_to " @#{tweet.user.username}", tweet.user, class:"text-gray-400 font-normal"%></span>
 
           <span class="text-gray-400 font-normal inline-block text-xs"><%= time_ago_in_words(tweet.created_at) %> ago</span>
         </div>
