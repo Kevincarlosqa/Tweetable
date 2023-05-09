@@ -4,7 +4,7 @@
 <%= render "form" %>
 
 <div id="tweets">
-  <% @tweets.where(parent: nil).each do |tweet|%>
+  <% @tweets.where(parent: nil).order(created_at: :desc).each do |tweet|%>
     
     <%= render tweet %>
    
