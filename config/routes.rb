@@ -9,4 +9,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root to: "tweets#index"
+
+  namespace :api do # api/
+    # GET /api/tweets
+    resources :tweets, only: [:index]
+  end
 end
