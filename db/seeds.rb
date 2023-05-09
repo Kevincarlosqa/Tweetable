@@ -19,7 +19,7 @@ url_def = "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-p
 image_default = URI.open(url_def)
 puts "Seeding Users"
 
-admin = User.create(username: "admin", email: "admin@mail.com", name: "admin", role: "admin",password: "qwerty", password_confirmation: "qwerty")
+admin = User.create(username: "admin", email: "admin@mail.com", name: "admin", role: "admin",password: "supersecret", password_confirmation: "supersecret")
 user1 = User.create(username: "user1", email: "user1@mail.com", name: Faker::Name.name, password: "qwerty", password_confirmation: "qwerty")
 user2 = User.create(username: "user2", email: "user2@mail.com", name: Faker::Name.name, password: "qwerty", password_confirmation: "qwerty")
 user3 = User.create(username: "user3", email: "user3@mail.com", name: Faker::Name.name, password: "qwerty", password_confirmation: "qwerty")

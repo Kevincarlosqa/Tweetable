@@ -6,7 +6,12 @@ class Api::TweetsController < ApiController
   end
 
   def show
+    replies = []
     tweet = Tweet.find(params[:id])
-    render json: tweet, status: :ok
+    tweet.replies.each do |replie|
+      replies << replie
+    end
+    render json: [tweet, replies], status: :ok
   end
+
 end
