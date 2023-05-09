@@ -72,3 +72,5 @@ gem 'devise'
 gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
 gem 'omniauth-rails_csrf_protection'
 gem "tailwindcss-rails", "~> 2.0"
+
+gem "pundit", "~> 2.3"
