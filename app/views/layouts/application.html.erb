@@ -6,9 +6,12 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= javascript_include_tag 'application' %>
+
   </head>
 
   <body class="bg-gray-100 grid">
@@ -20,6 +23,7 @@
           visibility: visible;
         }
       </style>
+      
       <div class="max-w-screen-xl flex justify-between mx-auto p-4">
        <a href="/" class="flex items-center">
         <img src="https://www.seekpng.com/png/detail/140-1402510_twitter-logo-white-twitter-logo-svg.png" class="h-8 mr-" />
