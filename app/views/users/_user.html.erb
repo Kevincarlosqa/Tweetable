@@ -43,9 +43,6 @@
   <h3> Likes (<%= user.likes.size%>) </h3>
   <% user.likes.each do |tweet| %>
     <%= render tweet.tweet %>
-    <p>
-      <%= link_to "Show this tweet", tweet %>
-    </p>
   <% end %>
   
 </div>
